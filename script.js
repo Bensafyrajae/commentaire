@@ -2,7 +2,6 @@ const commentSection = document.getElementById("comments");
 const commentInput = document.getElementById("comment-input");
 const addCommentBtn = document.getElementById("add-comment-btn");
 
-// Fonction pour ajouter un commentaire principal
 function addComment(content, isSubComment = false, parentComment = null) {
     const comment = document.createElement("div");
     comment.className = isSubComment ? "comment sub-comment" : "comment";
@@ -14,8 +13,7 @@ function addComment(content, isSubComment = false, parentComment = null) {
     const actions = document.createElement("div");
     actions.className = "actions";
     actions.innerHTML = `<span class="reply">Répondre</span>`;
-    
-    // Ajouter une logique pour répondre
+ 
     actions.querySelector(".reply").addEventListener("click", () => {
         const replyBox = document.createElement("div");
         replyBox.className = "new-reply";
